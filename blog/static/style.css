@@ -1,0 +1,184 @@
+
+.s-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* max-width: 500px;
+    max-height: 300px; */
+    /* margin : auto; */
+    text-align: center;
+    font-family: arial;
+    padding-bottom: 2px;
+    border-bottom: thick;
+    border-bottom: 20px;
+  }
+
+.s-card p button {
+  padding: 10px 10px 10px 0px;
+  /* margin-left: 0px;  */
+}
+
+  .s-card img{
+    height: 220px;
+    width: 220px;
+  }
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  button {
+    border: thin;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: saddlebrown;
+    text-align: center;
+    cursor: pointer;
+    width: 170px;
+    font-size: 18px;
+    border-radius: 20px;
+    border-color: saddlebrown;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  button:hover{
+    color-adjust: transparent;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  a:hover {
+    color: black
+  }
+.article-img {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  bottom: 45px;
+  right: 45px;
+  opacity: 1.0;
+  border:thin;
+}
+
+/* POST CLASSES */
+.post-author {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-right: 20px;
+  color: darkcyan;
+}
+.post-title {
+  padding-bottom: 0px;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.post-content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: slategrey;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+/* NICE HEADER */
+.nice-head{
+  opacity: 1.0;
+  border-bottom: thin;
+  border-bottom-color: black;
+  width: 100%;
+}
+
+/* TEXT */
+.text-size {
+  font-size: 20px;
+  color: darkcyan;
+}
+
+/* CLASS DECORATOR */
+.decorator {
+  color: rgba(8, 2, 9, 0.5);
+  border: thick;
+  border-bottom-color: chartreuse;
+}
+
+.myCard {
+  border-top-right-radius: 70px !important;
+  margin-top: 30px;
+  /* border-bottom-left-radius: 100px !important; */
+}
+
+.space-remove {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+.btn-size {
+  margin-top: 50px !important;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  margin-left: 75px;
+  /* margin-right: px; */
+  /* font-size: 25px; */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.stickin {
+  position: sticky;
+  top:100px;
+}
+
+
+.link {
+  font-size: 12px;
+  color: blue;
+
+}
+.link :hover {
+  color: aqua;
+  }
+
+.login_form {
+  padding: 10px 50px;
+}
+
+.marginl{
+  margin-left: 70px;
+}
+
+.btn-small {
+  width: 30%;
+}
+
+.stickin-header {
+  position: sticky;
+  top:0px;
+  z-index: 50;
+  background: #3399ff !important;
+  padding: 0px;
+}
+
+.font {
+  font-size: 20px;
+  color:  white;
+  position: relative;
+  left: 760px;
+}
+.font :hover{
+  color: white;
+}
+
+.register_form {
+  padding: 5px 50px;
+}
+
+.register_form small{
+  display: none;
+}

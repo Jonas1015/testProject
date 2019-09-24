@@ -1,0 +1,61 @@
+{% extends "pages/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+        <!-- <div class="content section ">
+                <div class="media">
+                        <img class="rounded-circle" src="{{ user.profile.image.url}}">
+                        <div class="media-body">
+                                <h2 class="account-heading">{{ user.username }}</h2>
+                                <p class="text-secondaurlry">{{ user.email }}</p>
+                        </div>
+                </div>
+        </div> -->
+        <div class="s-card">
+                {% if user.username == 'jonas' %}
+                        <img class="rounded-circle" width="100%" src="{{ user.profile.image.url }}" alt="{{ user.username }}"
+                        style="margin-top :30px">
+                        <h1 style="margin:20px 170px 40px; position: relative;">{{ user.username|title }}</h1>
+                        <h3 style="margin:20px 100px 40px; position: relative;">{{ user.email }}</h3>
+                        <p class="title">CEO & Founder</p>
+                        <p><b>IFM</b></p>
+                        <p><button><i class="fa fa-comment large"></i></button></p>
+                        <div style="margin-bottom: 0px ">
+                                <a href="#"><i class="fa fa-google"></i></a> 
+                                <a href="#"><i class="fa fa-twitter"></i></a>  
+                                <a href="#"><i class="fa fa-linkedin"></i></a>  
+                                <a href="#"><i class="fa fa-facebook"></i></a> 
+                        </div>
+                {% else %}
+                <div>
+                        <img class="rounded-circle" width="100%" src="{{ user.profile.image.url }}" alt="{{ user.username }}"
+                        style="margin-top :30px">
+                        <h1 style="margin:20px 160px 40px; position: relative;">{{ user.username|title }}</h1>
+                        <h3 style="margin:20px 130px 40px; position: relative;">{{ user.email }}</h3>
+                        <p style="margin:11px  160px 40px;"><button><i class="fa fa-lg fa-comment "></i></button></p>
+                        <div>
+                                <a href="#"><i class="fa fa-lg fa-google"></i></a> 
+                                <a href="#"><i class="fa fa-lg fa-twitter"></i></a>  
+                                <a href="#"><i class="fa fa-lg fa-linkedin"></i></a>  
+                                <a href="#"><i class="fa fa-lg fa-facebook"></i></a> 
+                        </div>
+
+                </div>
+                {% endif %}
+                <div  style="margin-top: 50px">
+                        <a href="{% url 'update' %}"><button><i class="fa fa-edit large"> Update</i></button></a>
+                </div>
+                <!-- <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">{{ user.username|title }} Profile</legend>
+                                {{ u_form| crispy }}
+                                {{ p_form| crispy }}
+                        </fieldset>
+                        <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Update</button>
+                        </div>    
+                </form> -->
+        </div>
+        
+        
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="register_form w3-card">
+        <form method="POST">
+            {% csrf_token %}
+                <h3 class=" mb-4">Join Us Today</h3>
+                {{ form| crispy }}
+            <div class="form-group">
+                <button class="btn btn-outline-info btn-small" type="submit">Sign Up</button>
+            </div>    
+        </form>
+        <div class=" ">
+            <small class="text-muted">Already Have an Account?
+                <a class="link" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

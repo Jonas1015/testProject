@@ -1,0 +1,23 @@
+{% extends "pages/base.html" %}
+{% block content %}
+  <article class="shadow p-3 mb-5 rounded card">
+        <div class="shadow-none ">
+                <div class="nice-head ">
+                        <div class="article-metadata ">
+                            <img class="rounded-circle article-img" src=" {{ post.author.profile.image.url }}">
+                            <a class="post-author " href="#"><small class="text-size">{{ object.author|title }}</small></a>
+                            <small class="text-muted decorator">{{ object.date_posted }}</small>
+                        </div>
+                        {% if object.author == user %}
+                        <div class="space-remove post-title">
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1 " href="{% url 'post-update' post.id %}">Update</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1 " href="{% url 'post-delete' post.id %}">Delete</a>
+                        </div>
+                        {% endif %}
+                </div>
+                <div class="dropdown-divider"></div>
+            <h3 style="margin-top: 8px"  class = "post-title card-title article-title">{{ object.title }}</h3>
+            <p class="post-content card-body">{{ object.content }}</p>
+        </div>
+    </article>
+{% endblock content%} 

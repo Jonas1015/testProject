@@ -1,0 +1,20 @@
+h{% extends "pages/base.html" %}
+{% block content %}
+    {% for post in posts %}
+    <article class="shadow p-3 mb-5 rounded card myCard">
+        <div class="shadow-none ">
+                <div class="nice-head">
+                        <div class="">
+                            <img class="rounded-circle article-img " src=" {{ post.author.profile.image.url }}">
+                            <a class="post-author " href="#"><small class="text-size">{{post.author|title }}</small></a>
+                            <small class="text-muted decorator ">{{post.date_posted}}</small>
+                        </div>
+                </div>
+            <div class="dropdown-divider space-remove"></div>
+            <h3 class="mt-0"><a class="post-title card-title article-title" href=" {% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
+            <!-- <p class="post-content mb-0 text-trunc">{{ post.content|truncatewords:20 }}</p> -->
+            <p class="post-content mb-0 text-trunc">{{ post.content|truncatewords:50 }} </p>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock content%}

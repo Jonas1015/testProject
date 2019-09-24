@@ -1,0 +1,9 @@
+{% extends "pages/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2>You have been Logged Out!</h2>
+    <br>
+        <h6 class="text-muted">Click the link below to</h6>
+        <a href="{% url 'login' %}" class="post-author">Sign in again</a>
+        
+{% endblock content %}

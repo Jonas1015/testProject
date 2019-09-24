@@ -1,0 +1,22 @@
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="login_form w3-card">
+      {% extends "pages/base.html" %}
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group ">
+               <h3> Log In</h3>
+                {{ form| crispy }}
+            </div>
+            <div class="form-group">
+                <button class="btn btn-outline-info btn-small" type="submit">Login</button>
+                <a class="link marginl" href="#"> forgot password?</a>
+            </div>
+        </form>
+        <div>
+            <div class="text-muted"> Dont have an account?
+                <a class="link" href="{% url 'register'%}">Sign Up Now</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
